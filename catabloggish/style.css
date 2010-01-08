@@ -1,0 +1,607 @@
+/*  
+Theme Name: Catabloggish
+Theme URI: http://www.library.umass.edu/spcoll/
+Description: Catabloggish is a theme designed by archivists for use by archivists in creating a catablog: an online inventory of archival collections.  A descendent of Blueline, Catabloggish is a 3 column theme with one sidebar on the right and one to the left of the content area that uses a soft color scheme and very few images. Both sidebars are widget ready.  For best results, please consider adding the following plugins (or their equivalent): Contact Form 7 (to create a reference form), Next-Gen Gallery (to create online image galleries), Tag Dropdown Widget (to create a dropdown menu for tags), Search suggest (to provide suggestions for alternatives for failed searches), and WP-Paginate (to provide page breakdowns for long result sets).
+Version: 1.0
+Author: SCUA
+Author http://www.library.umass.edu/spcoll/
+*/
+
+/**************************** Basic layout ********************/
+
+body { margin: 0px; background-color: #f1eef3; font-family: tw cen mt, Arial, Helvetica, sans-serif; }
+
+#header { width: 100%; text-align: center; /*Center child #headerimg in IE*/ position: relative; margin: 0; }
+#headerimg { margin: 0 auto; /*Center in Mozilla*/ clear: both; }
+
+.pagetitle { display: block; font-size: 104%; text-align: left; color:#554e2f; }
+
+.entry { color:#555; margin-left:1em; margin-bottom: 1.5em; margin-right:1.5em; }
+
+
+
+/************************ Standard posts **********************/
+
+.posttitle { font-size: 108%; padding-left: 8px; padding-top: 2px; padding-bottom: 4px; margin-top: 12px; margin-bottom: 5px; border-top: 2px solid #5a5a59; border-bottom: 1px solid #9f9f92; background-color:#c4c4b4; }
+
+.posttitle:hover { border-top: 2px solid #5a5a59; border-bottom: 1px solid #7c7c72; }
+
+.posttitle a:link { color: #553934; letter-spacing:0.1em; text-decoration:none; }
+.posttitle a:visited { color: #707067; letter-spacing:0.1em; text-decoration:none; }
+.posttitle a:hover { color: #74797d; text-decoration:none; letter-spacing:0.1em; }
+
+.origination, .origination a { font-size:107%; color:#8b8453; border-bottom:none; padding-left:1em; }
+.originationlineabove { font-size:107%; color:#8b8453; padding-top:6px; border-top: 1px dotted #999; }
+.rouge { color:#564040; }
+.callno { text-align:right; margin-right:2em; color:#706868; }
+
+.unittitle { margin-left:2em; text-indent:-1em; font-size:104%; color:#343430;  }
+
+.abstract { margin-left:2em; font-size:97%; padding-bottom:12px; }
+
+.unitid { float:left; font-size:101%; width:48%; padding-top:4px; border-top:1px dotted #aaa; padding-bottom:7px; }
+.linky { float:right; text-align:right; font-size:97%; width:48%; padding-top:4px; border-top:1px dotted #aaa; padding-bottom:7px; }
+.linky:before  { content:" :: "; }
+
+.altform { clear:both; text-align:right; font-size:95%; }
+
+.controlaccess { padding-top:12px; margin-left:5em; display:block; font-size:95%; padding-bottom:12px; color:#4e4e4e; }
+.controlaccess li:first-child { margin-top:-0.75em; }
+
+
+
+
+/**************************** Blog masthead ********************/
+
+#blogmasthead { width: 950px; height:130px; display: block; color: #343119; text-align: left; margin: 9px 0px 0 35px; padding: 12px 0 0 0; letter-spacing:0.2em; }
+
+#blogmasthead a:link  { color: #343119; text-decoration: none; border: none; padding: 6px 15px; margin-left: 0; }
+
+#blogmasthead a:visited  { color: #343119; text-decoration: none; border: none; font-weight: bold; padding: 6px 15px; margin-left: 0; }
+
+#blogmasthead a:hover  { color: #343119; text-decoration: none; padding: 6px 15px; margin-left: 0; }
+
+
+
+/**************************** Masthead images ****************/
+
+.arise { position:relative; top:10px; height:110px; }
+
+.headerimage_home { background-image:url(http://www.library.umass.edu/spcoll/images/waugh244_950.jpg); background-repeat:no-repeat; } 
+
+.headerimage_archive { background-image:url(http://www.library.umass.edu/spcoll/images/waugh_hydrangea_950.jpg); background-repeat:no-repeat; }
+
+.headerimage_single { background-image:url(http://www.library.umass.edu/spcoll/images/waugh_244_950.jpg); background-repeat:no-repeat; }
+
+.headerimage_page { background-image:url(http://www.library.umass.edu/spcoll/images/waugh423_950.jpg); background-repeat:no-repeat; }
+
+.headerimage_searchresults { background-image:url(http://www.library.umass.edu/spcoll/images/waugh_rockvillect_950.jpg); background-repeat:no-repeat; background-position: top right; }
+
+.headerimage_default { background-image:url(http://www.library.umass.edu/spcoll/images/waugh_dogwood_950.jpg); background-repeat:no-repeat; }
+
+
+
+/**************************** Container ****************/
+
+#container { clear:left; padding:0px; margin-left:35px; margin-right:100px; margin-top: 0px; width: 948px; overflow: hidden; border-top:1px solid #DFDAC3; border-left:1px solid #999; border-right:1px solid #999; background-color: #f1eef3; }
+
+
+
+/************************ Blue panel **********************/
+
+#bluepanel { position:relative; top:0px; left:35px; width: 933px; height:40px; line-height:40px; overflow: hidden; border-top: 1px solid #596064; border-left: 1px solid #596064; border-right: 1px solid #596064; border-bottom: 1px solid #596064; background-color:#798288; text-align:right; margin-right:15px; padding-right:15px; }
+
+.blogname { padding-left:25px; float:left; font-size:115%; letter-spacing:0.7em; }
+
+#bluepanel { color:#d1ded7; }
+
+#bluepanel .blogname a { color:#d8e5de; }
+
+#bluepanel ul { margin:0; padding:0; }
+
+#bluepanel li { float:left; margin:0; padding:0; list-style-type:none; border-right:1px solid; white-space:nowrap; border-color:#dfdac3;}
+
+#bluepanel a { color:#c0cec7; font-size:93%; letter-spacing:0.1em; text-decoration:none; border-bottom:0px solid #fff; }
+
+#bluepanel li a { display:block; padding:0 18px; font-size:0.8em; text-transform:uppercase; letter-spacing:1px; }
+
+* html #bluepanel a { width:1%; } /* see http://www.positioniseverything.net/explorer/escape-floats.html */
+
+#bluepanel form { float:right; height:100%; width:164px; padding:0 15px; border-left:1px solid; line-height:0; }
+
+#bluepanel form fieldset { /* centering the search form could've   been done way more elegant but IEWin   and Opera refused to follow the rules */   margin-top:7px;   border:0 solid; /* Opera */ }
+
+* html #bluepanel form fieldset {margin-top:7px;}
+
+#bluepanel #s { height:1.5em; width:115px; margin:0 5px 0 0; padding:0; border:1px #444 solid; font-size:0.8em; vertical-align:middle; font-family:tw cen mt, arial, sans-serif; border-color:#FFF9EA; }
+
+#bluepanel #searchbutton { height:2em; width:auto; padding:0 1px;  /* border:1px solid;*/ font-size:9px; letter-spacing:1px; text-align:center; vertical-align:middle; font-family:tw cen mt, arial, sans-serif; color:white; background-color:#798288; }
+
+#bluepanel .selected, #bluepanel a:hover { border-bottom:1px dotted #cacaca; }
+
+#bluepanel form { border-color:#DFDAC3; background:#798288 url(img/search.gif) bottom left no-repeat; }
+
+.credits { margin-top: -25px; padding: 0 4px 5px 4px; float: right; }
+
+.bluepanel { display: block; text-align: center; margin-top: 10px; margin-bottom: 0; }
+
+.bluepanel a:link { color:#996262; text-decoration:none; }
+
+.bluepanel a:hover{ color:#663030; text-decoration:underline; }
+
+.wp-smiley { padding: 0; }
+
+
+
+/************************ Content **********************/
+
+#content { margin: 0px 185px 12px 185px; padding: 1em; text-align: left; background: #f1eef3; padding-bottom:1.5em; padding-top: 10px; margin-top:8px; }
+
+#content ul { margin-left:4em; padding-left: 4px; }
+
+#content ul li { padding-left: 4px; background: url() no-repeat; }
+
+#content ul ul li{ padding-left: 4px; }
+
+#content ol { list-style-position: inside; padding-left: 15px; padding-top: 2px; margin-bottom: 10px; }
+
+#content p { padding-left: 10px; }
+
+
+
+/********************** Left Sidebar Container *******************/
+
+#leftnav { float:left; width:180px; margin:0px; padding-top: 0px; padding-right:5px; margin-top: -8px; margin-bottom: 20px; margin-right: 3px; margin-left:5px; text-align: left; font-size:92%; }
+
+
+
+/******************** Right Sidebar Container *******************/
+
+#rightnav { float: right; width: 180px; margin: 0px; padding-top: 0px; padding-left:5px; margin-top: -8px; margin-bottom: 20px; margin-right:4px; margin-left: 3px; text-align: left; font-size:92%; }
+
+#rightnav ul { list-style: none; }
+#rightnav ul li ul { list-style: circle; }
+
+
+
+/************************ Left Sidebar **********************/
+
+#sidebarleft { margin-left:0px; margin-bottom: 10px; padding:0; font-size:92%; border-right:1px dotted #aaa; background-color:#dad8c5; }
+
+#sidebarleft li { padding-bottom: 8px; }
+
+#sidebarleft ul li { padding-bottom: 2px; }
+
+#sidebarleft ul li ul li { padding-bottom: 2px; }
+
+#sidebarleft ul li li { padding-bottom: 2px; }
+
+#sidebarleft a:link { color: #571b14; text-decoration: none; border:none; }
+
+#sidebarleft a:hover { color: #999; text-decoration: none; border-bottom:1px dotted #999; }
+
+#sidebarleft a:visited:hover { color: #5a5a4e; text-decoration: none; border: none; }
+
+#sidebarleft a:visited { color: #682c25; text-decoration: none; border: none; }
+
+#sidebarleft h2 { color: #332e2b; padding: 2px 8px 4px 9px; letter-spacing:0.05em; background-color:#aaaa99; border-top:1px solid #7f7e7c; border-bottom:1px dotted #9b8a81; }
+
+
+
+/************************ Right Sidebar **********************/
+
+#sidebarright { margin-left:0px; margin-bottom: 10px; padding:0; font-size:92%; border-left:1px dotted #aaa; background-color:#dad8c5; }
+
+#sidebarright li { padding-bottom: 8px; }
+
+#sidebarright ul li { padding-bottom: 2px; }
+
+#sidebarright ul li ul li{ padding-bottom: 2px; }
+
+#sidebarright a:link { color: #571b14; text-decoration: none; border:none; }
+
+#sidebarright a:hover { color: #999; text-decoration:none; border-bottom:1px dotted #999; }
+
+#sidebarright a:visited:hover { color: #5a5a4e; text-decoration:none; border: none; }
+
+#sidebarright a:visited { color: #682c25; text-decoration: none; border: none; }
+
+#sidebarright h2 { color: #332e2b; padding: 2px 8px 4px 9px; margin-top:8px; letter-spacing:0.05em; background-color:#aaaa99; border-top:1px solid #7f7e7c; border-bottom:1px dotted #9b8a81; }
+
+#leftnav p, #rightnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }
+
+
+
+/************************ Footer **********************/
+
+
+#footwrap { clear:both; /*float:left;*/ /*width: 100%;*/ background-color: #798288; color: #bfbdb6; height:35px; padding: 0px 1em 4px 1em; font-weight: normal; border-top: 3px solid #50565a; }
+
+#footwrap p { display: block; margin-top:0px; margin-bottom: 2px; text-align:center; }
+
+#footwrap a:link { color: #c0cec7; text-decoration: none; border-bottom:none; }
+
+#footwrap a:hover { color: #efefef; text-decoration: none; border-bottom: none; }
+
+#footwrap a:visited { color: #c0cec7; text-decoration: none; border-bottom: none; }
+
+#footwrap img { padding: 0px 5px 0px 5px; }
+
+.footertext { font-size:82%; margin-left:72px; color:#fbfbfb; }
+.repository_footer { letter-spacing:0.25em; font-size:110%; }
+.parentinstitution_footer { color:#fff; padding-left:16px; padding-right:5px; }
+.addressline_footer { padding-left:3px; padding-right:5px; }
+
+
+
+
+/************************ Paragraph **********************/
+
+p { margin-bottom: 12px; margin-top: 12px; }
+
+
+
+/************************ Blockquote **********************/
+
+
+blockquote { margin: 0px 0px 0px 30px; padding: 0px 25px 0px 0px; font-style: italic; color: #666666; border-left: 2px solid #ededed; }
+
+
+
+
+
+/************************ Post metadata **********************/
+
+
+.postmetadata { clear:both; display:block; margin: 5px 5px 7px 0px; border-top: 1px solid #ccc; border-bottom: 1px solid #777; padding:5px 8px 7px 8px; text-align:left; font-size:85%; color:#888; }
+
+#content .postmetadata { padding-left: 2px; }
+
+.postmetadata a:link { border: none; color: #906161; font-weight: normal; }
+
+.postmetadata a:hover { border: none; color: #774040; font-weight: normal; text-decoration:none; }
+
+.postmetadata a:visited:hover { border: none; color: #774040; font-weight: normal; }
+
+.postmetadata a:visited { border: none; color: #996262; font-weight: normal; }
+
+
+
+
+/************************ Links **********************/
+
+a:link { color: #884040; border-bottom: 1px dotted #cabaaa; text-decoration: none; }
+
+a:hover { color: #432121; text-decoration: none; }
+
+a:visited { color: #996262; text-decoration: none; }
+
+a:visited:hover { text-decoration: none; }
+
+a img { border:none; background:none; padding:5px; }
+
+#feed, #feed img a:link, #feed img a:visited { border: none; }
+
+
+
+
+/************************ Comments **********************/
+
+
+
+
+.commentlist { padding-left: 40px; padding-right: 15px; background: #fff; color: #000; }
+
+.commentlist li { margin: 8px 10px 8px 15px; padding-left: 12px; list-style: none; background: #DFDAC3; margin-bottom: 2px; border: 1px solid #8C9EAA; }  li.alt { background: #fff; border: 1px solid #8C9EAA; }
+
+.commentlist cite { padding: 2px 3px 1px 3px; }
+
+.commentlist p { padding: 5px 5px 2px 3px; margin-bottom: 5px; }
+
+.commentlist a:link { border: none; text-decoration: underline; font-weight: bold; color: #8C9EAA; }
+
+.commentlist a:visited { border: none; text-decoration: underline; font-weight: bold; color: #8C9EAA; }
+
+.commentlist a:hover { border: none; text-decoration: underline; font-weight: bold; color: #8C9EAA; }
+
+.commentlist a:visited:hover { border: none; text-decoration: underline; font-weight: bold; color: #8C9EAA; }
+
+.commentmetadata a:link, .commentmetadata a:hover, .commentmetadata a:visited { text-decoration: none; color: #8C9EAA; }
+
+.commentnumber { font: italic normal 14px 'Times New Roman', Times, serif; margin-top: 2px; float:right; color: #8C9EAA; font-size: 28pt; }
+
+#comment { width:80%; }
+
+
+
+/************************ Headings **********************/
+
+h1 { font-size: 220%; color: #666666; }
+
+h2 { display: block; font-size: 115%; font-weight:normal; padding: 5px 0 0 12px; margin: 5px 0 6px 0; text-align: left; }
+
+h3 { display: block; font-size: 108%; padding: 5px 0 0 12px; margin: 5px 0 6px 0; text-align: left; }
+
+h4 { margin-top: 15px; font-size: 13px; font-weight: bold; padding: 5px 0 0 12px; margin: 5px 0 6px 0; text-align: left; }
+
+h5 { margin-top: 15px; font-size: 12px; font-weight: bold; padding: 5px 0 0 12px; margin: 5px 0 6px 0; text-align: left; }
+
+
+
+/************************ Miscellaneous **********************/
+
+.date { font-size: 18px; float: right; text-transform: uppercase; letter-spacing: -2px; padding: 3px 5px 3px 5px; margin-top: 17px; text-align: center; color: #BFBFBF; }
+
+.bold { font-weight:bold; }
+.header { font-size:110%; color:#785a63; }
+
+
+
+/************************ Contained Floats Fixed **********************/
+.post { display: block; overflow:hidden; width:98%; }
+
+
+/************************ Code **********************/
+code { display: block; margin: 10px 30px 0 30px; padding: 2px 10px 5px 10px; border-top: 4px solid #798288; color: #666666; background: #DFDAC3; }
+
+/*#searchform { margin-left: 5px; }
+
+*/
+
+
+
+/************************ Calendar **********************/
+
+#wp-calendar {empty-cells: show; margin: 10px auto 0; width: 160px; }
+
+#wp-calendar #next a { padding-right: 10px; text-align: right; }
+
+#wp-calendar #prev a  { padding-left: 10px; text-align: left; }
+
+#wp-calendar td { padding: 2px 0; text-align: center; }
+
+#wp-calendar th { /*padding: 3px 0;*/ text-align: center; }
+
+#wp-calendar caption { text-align: center; width: 100%; text-transform: uppercase; font-weight: bold; }
+
+
+
+
+/******************** Full finding aid formatting **********************/
+
+
+#bioghist { border-top:1px dotted #ccc; padding-top:3em; }
+#scopecontent { padding-top:3em; }
+
+.thirteenred { font-size:105%; color:#766853; }
+.body { margin-left:3em; }
+.bodyunjust { margin-left:3em; }
+.lead1 { font-size:103%; margin-left:1.5em; color:#766853; }
+.lead2 { font-style:italic; margin-left:2em; color:#766853; }
+.italic { font-style:italic; }
+.clearall { clear:both; }
+.dschead { font-size:115%; padding-top:5px; padding-bottom:8px; border-top:1px solid #777; border-bottom:1px solid #777; color:#766853; }
+
+.insetdsc { margin-left:1.5em; padding-bottom:0.1em; color:#453422; }
+.ruddy { color:#666; margin-left:-0.5em; }
+.justifyfadelg { color:#444; padding-right:3em; }
+.justifyfade { margin-left:1.5em; color:#444; font-size:90%; padding-right:3em; }
+
+
+.center { text-align:center; }
+.toppanelcontact { background-color:#d9d8c5; padding-top:5px; padding-bottom:7px; padding-left:4px; border-top:solid 1px #777; border-right:solid 1px #777; border-left:solid 1px #777; border-bottom:solid 1px #777; }
+.outercontact { width:auto; padding-left:3em; margin-right:40px; float:right; }
+.innercontact { width:385px; padding-top:5px; padding-bottom:10px; padding-left:4px; border-top:solid 1px #777; border-right:solid 1px #777; border-left:solid 1px #777; border-bottom:solid 1px #777; }
+.innertopcontact { border:1px solid #999999; padding:2px; }
+.marginlefttwofive { margin-left:2.5em; }
+
+
+.hangingindent { text-indent: -1em; margin-left: 1em; } 
+
+.titlec .origination { font-size:100%; color:#5b542e; }
+
+.titlec { font-size:105%; text-indent:-1em; padding-left:1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+.twoem { text-indent:-1em; padding-left:4em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.threeem { text-indent:-1em; padding-left:7em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.fourem { text-indent:-1em; padding-left:9em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.fiveem { text-indent:-1em; padding-left:11em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.sixem { text-indent:-1em; padding-left:13em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.sevenem { text-indent:-1em; padding-left:15em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.eightem { text-indent:-1em; padding-left:17em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.nineem { text-indent:-1em; padding-left:19em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.tenem { text-indent:-1em; padding-left:21em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.elevenem { text-indent:-1em; padding-left:23em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.twelveem { text-indent:-1em; padding-left:25em; padding-right:1em; text-align:left; color:#443333; border-top:solid 1px #ddd; }
+.othercell { padding-left:1em; text-indent:-1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+.othercellright { padding-left:1em; text-indent:-0.5em; padding-right:1em; text-align:right; border-top:solid 1px #ddd; margin-right:0.2em; }
+
+
+.datec { text-indent:-1em; padding-left:1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+.physc { text-indent:-1em; padding-left:1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+.containc { text-indent:-1em; padding-left:1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+
+.airabove { padding-top:2em; clear:both; }
+
+
+.dscframework { width:95%; float:right; margin-right:0.5em; }
+
+
+.cbundleleft { width:64%; float:left; clear:both; }
+
+.cbundleleftleft { width:75%; float:left; }
+.cbundleleftright { width:25%; float:right; }
+
+.cbundleright { width:36%; float:right; }
+.cbundlerightleft { width:51%; float:left; }
+.cbundlerightright { width:49%; float:right; }
+
+
+
+.dscfirst { padding-top:3em; clear:both; }
+
+.sanscbundleleft { width:66%; float:left; clear:both; }
+.sanscbundleleftleft { width:100%; float:left; }
+.sanscbundleleftright {   }
+
+.sanscbundleright { width:34%; float:right; }
+.sanscbundlerightleft { width:51%; float:left; }
+.sanscbundlerightright { width:49%; float:right; }
+
+
+
+
+.othercell { padding-left:1em; text-indent:-1em; padding-right:1em; text-align:left; border-top:solid 1px #ddd; }
+
+.othercellright { padding-left:1em; text-indent:-0.5em; padding-right:1em; text-align:right; border-top:solid 1px #ddd; margin-right:0.2em; }
+
+
+.scopeuno { padding-left:3em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.twoscope { padding-left:5em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.threescope { padding-left:7em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.fourscope { padding-left:9em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.fivescope { padding-left:11em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.sixscope { padding-left:13em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.sevenscope { padding-left:15em; text-align:justify; margin-right:10em; font-size:90%; }
+.eightscope { padding-left:17em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.ninescope { padding-left:19em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.tenscope { padding-left:21em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.elevenscope { padding-left:23em; text-align:left; color:#444; text-align:justify; margin-right:10em; font-size:90%; }
+.twelvescope { padding-left:25em; text-align:justify; color:#444; margin-right:10em; font-size:90%; }
+
+.figureleft { float:left; padding-right:12px; }
+.figureright { float:right; padding-left:12px; }
+
+
+.defleft { text-indent: -1em; padding-left: 1em; padding-right:2em; text-align:left; vertical-align:top; border-top:1px dotted #999; }
+.defright { text-indent: -1em; padding-left: 1em; text-align:left; vertical-align:top; border-top:1px dotted #999; }
+.tablecell { font-size:90%; text-align:left; padding-right:1em; } 
+
+.breakabove { padding-top:1.2em; }
+.breakbelow { padding-bottom:1.5em; clear:both; }
+.breakabovebelow { padding-top:1.5em; padding-bottom:1.5em; clear:both; }
+
+.chronlisttable { width:98%; border:0; font-size:95%; margin-bottom:1em; }
+.frontmattertable { padding-left:0.5em; padding-top:0.2em; padding-bottom:0.2em; vertical-align:top; padding-right:5em; text-align:left; }
+
+
+
+
+/************************ Tabbed search menu **********************/
+
+#sidebarright ul li.tabbedmenu { padding-left:10px; background:url(img/); }
+
+/* root element for tabs  */
+ul.tabs { list-style:none; margin:0 !important; padding:0; height:25px; }
+
+/* single tab */
+ul.tabs li { float:left; text-indent:0; padding:0; padding-right:7px; margin:0 !important; list-style-image:none !important; background: none; }
+
+/* link inside the tab. uses a background image */
+ul.tabs a { font-size:91%; display:block; width:40px; text-align:center; text-decoration:none; color:#009900; padding:0px; margin:0px; position:relative; top:1px; }
+
+ul.tabs a:active { outline:none; }
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover { background-position: 0 -31px; color:#000; outline:none; }
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a { background-position: 0 -62px; cursor:default !important; color:#000 !important; border-top:1px solid #74745a; border-left:1px solid #74745a; border-right:1px solid #74745a;  border-bottom:0; }
+
+/* initially all panes are hidden */ 
+div.panes div.pane { display:none; }
+
+.panes { border-top:1px solid #74745a; height:160px; }
+
+
+
+
+
+/******************** Miscellaneous page formatting ********************/
+
+div.abstract > p.start:first-letter { font-size:200%; font-weight:bold; float:left; color:#5e4442; }
+
+.lineabove { border-top:1px solid #aaa; padding-top:2px; }
+
+#howdoifind th { font-weight:normal; font-size:105%; background-color:#898565; color:#eee; padding-left:9px; padding-top:3px; padding-bottom:5px; }
+#howdoifind th a { color:#eee; }
+
+.name { margin-left:1em; border-top:1px dotted #aaa; padding-top:3px; }
+.position { padding-left:11px; border-top:1px dotted #aaa; padding-top:3px; }
+.email { padding-left:11px; border-top:1px dotted #aaa; padding-top:3px; }
+
+.phone { border-top:1px dotted #aaa; padding-top:3px; }
+
+.attr { font-size:109%; border-bottom:1px solid #8d8d84; letter-spacing:0.1em; padding-bottom:3px; color:#1c1c17; }
+.subtitle { font-size:108%; padding-bottom:2px; color:#94949d; }
+.subtitle a:link { color:#94949d; text-decoration:none; border-bottom:none; }
+
+.linebelow { border-bottom: 1px dotted #999; padding-bottom:4px; }
+.sandwichlarge { border-top: 1px solid #999; border-bottom: 1px solid #999; width:50%; padding-top: 5px; padding-bottom: 7px; padding-left:4px; font-size:110%; color:#5b542e;  }
+
+.menusandwich { display: block; margin-left: auto; margin-right: auto; border-top: 1px solid #999; border-bottom: 1px solid #999; width:74%; padding-top: 5px; padding-bottom: 7px; text-align:center; font-size:75%; color:#5b542e;  }
+
+.inset { margin-left:1.5em; padding-top:3px; padding-bottom:11px; }
+
+
+
+
+/**************************** Image formatting ********************/
+
+img { border:none; }
+.caption { text-align:center; font-size:85%; color:#8d8d6b; }
+td { vertical-align:top; }
+.locatelogo { position:absolute; top:150px; left:75px; }
+.imagecenter { display: block; margin-left: auto; margin-right: auto; }
+.imageleft { float:left; padding-right:12px; }
+.imageright { float:right; padding-left:12px; }
+.floatleft { float:left; padding-right:12px; }
+.floatright { float:right; padding-left:12px; }
+.alignleft { float:left; padding-right:12px; }
+.alignright { float:right; padding-left:12px; }
+.bordered { border:1px solid #111; }
+.borderedentry { border:1px solid #111; width:220px; }
+.inentry { width:220px; padding-left:15px; }
+
+
+
+
+/**************************** Drop down formatting ********************/
+
+input { margin-left:0.4em; border:1px solid #223333; font-family:tw cen mt, arial, sans-serif; width:92%; }
+
+.searchform { margin-left:3em; width:270px; padding:3px; }
+
+.searchformbutton { width:90px; }
+
+.submitbutton { background:#a39e8b; color:#ece5c9; font-family:tw cen mt, arial, sans-serif; width:130px; }
+
+textarea { margin-left:0.5em; border:1px solid #223333; font-family:tw cen mt, arial, sans-serif; }
+
+select { border:1px solid #444; margin-left:0.6em; font-family:tw cen mt, arial, sans-serif; color:#7a3f38; width:94%; }
+
+option { font-family:tw cen mt, arial, sans-serif; color:#333; font-size:99%; }
+
+
+/**************************** Widget layout ********************/
+
+
+.sidelisthead { padding-left:0.75em; color:#494940; font-size:116%; letter-spacing:0.1em; }
+.addedentries { clear:both; padding-top:5px; border-top:1px dotted #aaa; }
+.subjectsection { padding-top:8px; margin-left:1.5em; font-size:115%; font-weight:bold; letter-spacing:0.2em; padding-bottom:1px; }
+
+#closelists li:first-child { margin-top:-1.6em; }
+
+#archivelist li { font-size:90%; }
+#archivelist ul { margin-left:2em; }
+
+.menutop { clear:both; text-align:center; }
+.menubottom { clear:both; text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding-top:4px; padding-bottom:7px; }
+
+.wp-paginate { color:#999; }
+.wp-paginate li { display:inline; list-style:none; border-left:1px solid #ccc; padding-left:4px; padding-right:4px; }
+
+.search-terms { color:#885555; border-bottom:1px dotted #885555; }
+
+
+
